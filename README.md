@@ -14,7 +14,7 @@ It contains the following descriptions:
     - ```result.xlsx```:
         the results of PeCatch, Slither, GasSaver and python-solidity-optimizer
     - ```gas impact-bugs``` folder:
-        patches of the 8 bugs our tool found for each pattern.
+        patches of the 8 bugs used to calculate gas impact.
 
 ## Getting Started
 
