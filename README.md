@@ -1,16 +1,44 @@
-### Hi there 👋
+# The code and results for PLDI 2024 Artifact Evaluation
 
-<!--
-**PeCatch-Artifact/PeCatch-Artifact** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Paper: How to Save My Gas Fees: Understanding and Detecting Real-world Gas Issues in Solidity Programs
 
-Here are some ideas to get you started:
+This document is to help users reproduce the results we reported in our submission. 
+It contains the following descriptions:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Getting Started
+
+### Install PeCatch
+```bash
+$ git clone https://github.com/PeCatch-Artifact/PeCatch-Artifact.git
+$ cd PeCatch-Artifact/code
+$ pip install -r requirements.txt
+$ python setup.py develop
+```
+
+### Run checkers
+```
+slither --detect <checker name> <directory path>/<contract path>
+```
+checker names: and-in-if, implicit-return, redundant-sload, bool, unchecked, mem-call, alloc-in-loop, loop-invariant
+
+example of run and-in-if:
+```
+slither --detect and-in-if tests/test_chr1/test.sol
+```
+
+example of run multiple checkers:
+```
+slither --detect and-in-if,bool,unchecked tests/test_chr1/test.sol
+```
+
+### Artifact Overview
+- ```benchmark``` folder:
+    the 10 repostories of the specific version on which we conduct our experiments
+- ```code``` folder:
+    source code of PeCatch
+- ```results``` folder:
+    - ```result.xlsx```:
+        the results of PeCatch, Slither, GasSaver and python-solidity-optimizer
+    - ```gas impact-bugs``` folder:
+        patches of the 8 bugs our tool found for each pattern.
+
