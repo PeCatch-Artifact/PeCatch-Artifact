@@ -1,0 +1,85 @@
+openzeppelin
+INFO:Detectors:
+PaymentSplitter._addPayee(address,uint256) (contracts/finance/PaymentSplitter.sol#200-209) has costly operations inside a loop:
+	- _totalShares = _totalShares + shares_ (contracts/finance/PaymentSplitter.sol#207)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#costly-operations-inside-a-loop
+INFO:Slither:./contracts/finance analyzed (12 contracts with 6 detectors), 1 result(s) found
+
+INFO:Detectors:
+GovernorVotesQuorumFraction._quorumNumerator (contracts/governance/extensions/GovernorVotesQuorumFraction.sol#19) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Slither:./contracts/governance/extensions analyzed (167 contracts with 6 detectors), 1 result(s) found
+
+MinimalForwarder.execute(MinimalForwarder.ForwardRequest,bytes) (contracts/metatx/MinimalForwarder.sol#47-72) tries to limit the gas of an external call that controls implicit decoding
+	(success,returndata) = req.to.call{gas: req.gas,value: req.value}(abi.encodePacked(req.data,req.from)) (contracts/metatx/MinimalForwarder.sol#55-57)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#return-bomb
+INFO:Slither:./contracts/metatx analyzed (7 contracts with 6 detectors), 1 result(s) found
+
+INFO:Detectors:
+ERC20Permit._PERMIT_TYPEHASH_DEPRECATED_SLOT (contracts/token/ERC20/extensions/draft-ERC20Permit.sol#37) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Slither:./contracts/token/ERC20/extensions analyzed (93 contracts with 6 detectors), 1 result(s) found
+
+Seadrop:
+None
+
+Seaport:
+None
+
+Solmate:
+None
+
+uniswap-lib:
+None
+
+v2-core:
+None
+
+v2-periphery:
+INFO:Detectors:
+getAmountsOut(uint256,address[]) should be declared external:
+	- UniswapV2Router01.getAmountsOut(uint256,address[]) (contracts/UniswapV2Router01.sol#273-275)
+Moreover, the following function parameters should change its data location:
+path location should be calldata
+getAmountsIn(uint256,address[]) should be declared external:
+	- UniswapV2Router01.getAmountsIn(uint256,address[]) (contracts/UniswapV2Router01.sol#277-279)
+Moreover, the following function parameters should change its data location:
+path location should be calldata
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
+INFO:Detectors:
+getAmountsOut(uint256,address[]) should be declared external:
+	- UniswapV2Router02.getAmountsOut(uint256,address[]) (contracts/UniswapV2Router02.sol#427-435)
+Moreover, the following function parameters should change its data location:
+path location should be calldata
+getAmountsIn(uint256,address[]) should be declared external:
+	- UniswapV2Router02.getAmountsIn(uint256,address[]) (contracts/UniswapV2Router02.sol#437-445)
+Moreover, the following function parameters should change its data location:
+path location should be calldata
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
+INFO:Slither:./contracts analyzed (26 contracts with 6 detectors), 4 result(s) found
+
+v3-core:
+None
+
+v3-periphery:
+INFO:Detectors:
+QuoterV2.quoteExactOutputSingle(IQuoterV2.QuoteExactOutputSingleParams) (contracts/lens/QuoterV2.sol#197-228) has costly operations inside a loop:
+	- amountOutCached = params.amount (contracts/lens/QuoterV2.sol#211)
+QuoterV2.quoteExactOutputSingle(IQuoterV2.QuoteExactOutputSingleParams) (contracts/lens/QuoterV2.sol#197-228) has costly operations inside a loop:
+	- delete amountOutCached (contracts/lens/QuoterV2.sol#225)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#costly-operations-inside-a-loop
+INFO:Detectors:
+Quoter.quoteExactOutputSingle(address,address,uint24,uint256,uint160) (contracts/lens/Quoter.sol#125-150) has costly operations inside a loop:
+	- amountOutCached = amountOut (contracts/lens/Quoter.sol#135)
+Quoter.quoteExactOutputSingle(address,address,uint24,uint256,uint160) (contracts/lens/Quoter.sol#125-150) has costly operations inside a loop:
+	- delete amountOutCached (contracts/lens/Quoter.sol#147)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#costly-operations-inside-a-loop
+INFO:Detectors:
+UniswapInterfaceMulticall.multicall(UniswapInterfaceMulticall.Call[]) (contracts/lens/UniswapInterfaceMulticall.sol#27-38) tries to limit the gas of an external call that controls implicit decoding
+	(success,ret) = target.call{gas: gasLimit}(callData) (contracts/lens/UniswapInterfaceMulticall.sol#34)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#return-bomb
+INFO:Slither:./contracts/lens analyzed (49 contracts with 6 detectors), 5 result(s) found
+
+VRGDA:
+None
+

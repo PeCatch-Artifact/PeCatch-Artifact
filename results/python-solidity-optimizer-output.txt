@@ -1,0 +1,103 @@
+openzeppelin:
+input/utils/structs/EnumerableMap.sol
+### found instance of procedure rule 1; line: 452
+### found instance of procedure rule 1; line: 465
+### found instance of procedure rule 1; line: 472
+### found instance of procedure rule 1; line: 479
+### found instance of procedure rule 1; line: 492
+### found instance of procedure rule 1; line: 501
+
+########################################################################
+#########                SUMMARY OF RESULTS                    #########
+########################################################################
+######### number of instances              loop rule 1: 0
+######### number of instances              loop rule 2: 0
+######### number of instances              loop rule 3: 0
+######### number of instances              loop rule 4: 0
+######### number of instances              loop rule 5: 0
+######### number of instances              loop rule 6: 0
+######### number of instances             logic rule 1: 0
+######### number of instances             logic rule 2: 0
+######### number of instances         procedure rule 1: 6
+########################################################################
+
+
+seadrop:
+None
+
+seaport:
+None
+
+solmate:
+None
+
+uniswap-lib:
+input/libraries/SafeERC20Namer.sol
+### found instance of loop rule 3; line: 13
+### found instance of loop rule 5; line: 13
+### found instance of loop rule 3; line: 31
+### found instance of loop rule 5; line: 31
+
+########################################################################
+#########                SUMMARY OF RESULTS                    #########
+########################################################################
+######### number of instances              loop rule 1: 0
+######### number of instances              loop rule 2: 0
+######### number of instances              loop rule 3: 2
+######### number of instances              loop rule 4: 0
+######### number of instances              loop rule 5: 2
+######### number of instances              loop rule 6: 0
+######### number of instances             logic rule 1: 0
+######### number of instances             logic rule 2: 0
+######### number of instances         procedure rule 1: 0
+########################################################################
+
+v2-core:
+None
+
+v2-periphery:
+None
+
+v3-core:
+input/contracts/UniswapV3Pool.sol
+### found instance of loop rule 2; line: 646
+########################################################################
+#########                SUMMARY OF RESULTS                    #########
+########################################################################
+######### number of instances              loop rule 1: 0
+######### number of instances              loop rule 2: 1
+######### number of instances              loop rule 3: 0
+######### number of instances              loop rule 4: 0
+######### number of instances              loop rule 5: 0
+######### number of instances              loop rule 6: 0
+######### number of instances             logic rule 1: 0
+######### number of instances             logic rule 2: 0
+######### number of instances         procedure rule 1: 0
+########################################################################
+
+v3-periphery:
+input/contracts/NonfungibleTokenPositionDescriptor.sol
+### found instance of loop rule 2; line: 39
+
+input/contracts/lens/TickLens.sol
+### found instance of loop rule 3; line: 23
+### found instance of loop rule 5; line: 23
+### found instance of loop rule 3; line: 30
+### found instance of loop rule 5; line: 30
+
+########################################################################
+#########                SUMMARY OF RESULTS                    #########
+########################################################################
+######### number of instances              loop rule 1: 0
+######### number of instances              loop rule 2: 1
+######### number of instances              loop rule 3: 2
+######### number of instances              loop rule 4: 0
+######### number of instances              loop rule 5: 2
+######### number of instances              loop rule 6: 0
+######### number of instances             logic rule 1: 0
+######### number of instances             logic rule 2: 0
+######### number of instances         procedure rule 1: 0
+########################################################################
+
+VRGDA:
+None

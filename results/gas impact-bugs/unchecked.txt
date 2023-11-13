@@ -1,0 +1,67 @@
+contracts/token/ERC777/ERC777.sol
+...
+    /**
+     * @dev Creates `amount` tokens and assigns them to `account`, increasing
+     * the total supply.
+     *
+     * If `requireReceptionAck` is set to true, and if a send hook is
+     * registered for `account`, the corresponding function will be called with
+     * `operator`, `data` and `operatorData`.
+     *
+     * See {IERC777Sender} and {IERC777Recipient}.
+     *
+     * Emits {Minted} and {IERC20-Transfer} events.
+     *
+     * Requirements
+     *
+     * - `account` cannot be the zero address.
+     * - if `account` is a contract, it must implement the {IERC777Recipient}
+     * interface.
+     */
+    function _mint(
+        address account,
+        uint256 amount,
+        bytes memory userData,
+        bytes memory operatorData,
+        bool requireReceptionAck
+    ) internal virtual {
+        require(account != address(0), "ERC777: mint to the zero address");
+        address operator = _msgSender();
+        _beforeTokenTransfer(operator, address(0), account, amount);
+
+        // Update state variables
+        _totalSupply += amount;
+-        _balances[account] += amount;
++        unchecked{
++            _balances[account] += amount;
++        }
+
+        _callTokensReceived(operator, address(0), account, amount, userData, operatorData, requireReceptionAck);
+
+        emit Minted(operator, account, amount, userData, operatorData);
+        emit Transfer(address(0), account, amount);
+    }
+...
+
+contracts/utils/cryptography/MerkleProof.sol
+...
+    /**
+     * @dev Returns the rebuilt hash obtained by traversing a Merkle tree up
+     * from `leaf` using `proof`. A `proof` is valid if and only if the rebuilt
+     * hash matches the root of the tree. When processing the proof, the pairs
+     * of leafs & pre-images are assumed to be sorted.
+     *
+     * _Available since v4.4._
+     */
+    function processProof(bytes32[] memory proof, bytes32 leaf) internal pure returns (bytes32) {
+        bytes32 computedHash = leaf;
+-        for (uint256 i = 0; i < proof.length; i++) {
++        for (uint256 i = 0; i < proof.length; ) {
+            computedHash = _hashPair(computedHash, proof[i]);
++            unchecked {
++                i++;
++            }
+        }
+        return computedHash;
+    }
+...
