@@ -1,0 +1,77 @@
+{
+  "name": "seadrop",
+  "version": "1.0.0",
+  "description": "Primary drops on the evm.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "build": "hardhat compile --config ./hardhat.config.ts",
+    "test": "hardhat test --config ./hardhat.config.ts",
+    "test:forge": "forge test -vvv",
+    "profile": "REPORT_GAS=true hardhat test --config ./hardhat.config.ts",
+    "coverage": "rm -rf temp-src-coverage; hardhat preprocess --dest temp-src-coverage && hardhat coverage --config ./hardhat-coverage.config.ts --solcoverjs ./config/.solcover.js",
+    "lint:check": "yarn lint:check:format && yarn lint:check:solhint && yarn lint:check:eslint",
+    "lint:check:format": "prettier --check **.{sol,js,ts}",
+    "lint:check:solhint": "yarn build && solhint --config ./config/.solhint.json --ignore-path ./config/.solhintignore contracts/**/*.sol",
+    "lint:check:eslint": "eslint . --ext js,ts",
+    "lint:fix": "yarn lint:fix:format && yarn lint:fix:eslint",
+    "lint:fix:format": "prettier --write **.{sol,js,ts}",
+    "lint:fix:eslint": "eslint --fix . --ext js,ts",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.sol": "prettier --write",
+    "*.js": "prettier --write",
+    "*.ts": "prettier --write"
+  },
+  "dependencies": {
+    "ethers": "^5.7.0",
+    "hardhat": "^2.11.1"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.1.1",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.2",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.1",
+    "ethereum-waffle": "^3.4.4",
+    "hardhat-gas-reporter": "^1.0.9",
+    "hardhat-preprocessor": "^0.1.5",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "merkletreejs": "^0.2.32",
+    "prettier": "^2.7.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.24",
+    "solhint": "^3.3.7",
+    "solidity-coverage": "^0.8.2",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.0",
+    "typescript": "^4.8.3"
+  },
+  "resolutions": {
+    "async": ">=2.6.4",
+    "cross-fetch": ">=3.1.5",
+    "lodash": ">=4.17.21",
+    "node-fetch": ">=2.6.7",
+    "underscore": ">=1.12.1",
+    "yargs-parser": ">=5.0.1",
+    "web3": ">=1.8.0",
+    "got": ">=11.8.5"
+  }
+}

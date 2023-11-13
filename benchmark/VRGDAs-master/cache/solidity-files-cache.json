@@ -1,0 +1,1180 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "build_infos": "out/build-info",
+    "sources": "src",
+    "tests": "test",
+    "scripts": "script",
+    "libraries": [
+      "lib",
+      "node_modules"
+    ]
+  },
+  "files": {
+    "lib/forge-std/Vm.sol": {
+      "lastModificationDate": 1661958268000,
+      "contentHash": "0a574984ee176b9d0f87243b3c9c48af",
+      "sourceName": "lib/forge-std/Vm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.0, <0.9.0",
+      "artifacts": {
+        "Vm": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Vm.sol/Vm.json"
+        }
+      }
+    },
+    "lib/forge-std/console.sol": {
+      "lastModificationDate": 1661958268000,
+      "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
+      "sourceName": "lib/forge-std/console.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "console.sol/console.json"
+        }
+      }
+    },
+    "lib/solmate/test/utils/DSTestPlus.sol": {
+      "lastModificationDate": 1667570517825,
+      "contentHash": "6a05b5f57849b5d56fd3e94d27211d53",
+      "sourceName": "lib/solmate/test/utils/DSTestPlus.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/test/utils/Hevm.sol",
+        "lib/solmate/test/utils/ds-test/test.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "DSTestPlus": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "DSTestPlus.sol/DSTestPlus.json"
+        }
+      }
+    },
+    "lib/solmate/test/utils/Hevm.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "60742aa83f930a4226fbe7676f06b607",
+      "sourceName": "lib/solmate/test/utils/Hevm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "Hevm": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Hevm.sol/Hevm.json"
+        }
+      }
+    },
+    "lib/solmate/test/utils/ds-test/test.sol": {
+      "lastModificationDate": 1652997641000,
+      "contentHash": "962996f0e05d5218857a538a62d7c47e",
+      "sourceName": "lib/solmate/test/utils/ds-test/test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "DSTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "test.sol/DSTest.json"
+        }
+      }
+    },
+    "lib/solmate/tokens/ERC20.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "0c7c7ada139062536af09d69d96d395c",
+      "sourceName": "lib/solmate/tokens/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC20": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC20.sol/ERC20.json"
+        }
+      }
+    },
+    "lib/solmate/tokens/ERC721.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "ecc06cefc5404b9e1adbc2e459d5757e",
+      "sourceName": "lib/solmate/tokens/ERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC721": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC721.sol/ERC721.json"
+        },
+        "ERC721TokenReceiver": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC721.sol/ERC721TokenReceiver.json"
+        }
+      }
+    },
+    "lib/solmate/utils/SafeTransferLib.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "668dd0a8a175344c51036ae7fcb01d36",
+      "sourceName": "lib/solmate/utils/SafeTransferLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/tokens/ERC20.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "SafeTransferLib": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SafeTransferLib.sol/SafeTransferLib.json"
+        }
+      }
+    },
+    "lib/solmate/utils/SignedWadMath.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "408f576e359546d0f606fcea78076d34",
+      "sourceName": "lib/solmate/utils/SignedWadMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "SignedWadMath": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SignedWadMath.sol/SignedWadMath.json"
+        }
+      }
+    },
+    "src/LinearVRGDA.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "efe794c73d5b963c41e6bab1a7357b6c",
+      "sourceName": "src/LinearVRGDA.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/VRGDA.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LinearVRGDA": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LinearVRGDA.sol/LinearVRGDA.json"
+        }
+      }
+    },
+    "src/LogisticToLinearVRGDA.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "882406e6b0c9644f386415ad6d3acd3b",
+      "sourceName": "src/LogisticToLinearVRGDA.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LogisticVRGDA.sol",
+        "src/VRGDA.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LogisticToLinearVRGDA": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LogisticToLinearVRGDA.sol/LogisticToLinearVRGDA.json"
+        }
+      }
+    },
+    "src/LogisticVRGDA.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "eaf59d5c5f59c5badcda148788ce996e",
+      "sourceName": "src/LogisticVRGDA.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/VRGDA.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LogisticVRGDA": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LogisticVRGDA.sol/LogisticVRGDA.json"
+        }
+      }
+    },
+    "src/VRGDA.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "f9b02ce34ca96e0d7c912ac52bd1ada6",
+      "sourceName": "src/VRGDA.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/utils/SignedWadMath.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "VRGDA": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "VRGDA.sol/VRGDA.json"
+        }
+      }
+    },
+    "src/examples/LinearNFT.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "78e63ec3d663cab96c5be0150910a4b0",
+      "sourceName": "src/examples/LinearNFT.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/tokens/ERC20.sol",
+        "lib/solmate/tokens/ERC721.sol",
+        "lib/solmate/utils/SafeTransferLib.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LinearVRGDA.sol",
+        "src/VRGDA.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LinearNFT": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LinearNFT.sol/LinearNFT.json"
+        }
+      }
+    },
+    "src/examples/LogisticNFT.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "9c776a5f07a04c14d7e64f6f706be8b8",
+      "sourceName": "src/examples/LogisticNFT.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/tokens/ERC20.sol",
+        "lib/solmate/tokens/ERC721.sol",
+        "lib/solmate/utils/SafeTransferLib.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LogisticVRGDA.sol",
+        "src/VRGDA.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LogisticNFT": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LogisticNFT.sol/LogisticNFT.json"
+        }
+      }
+    },
+    "src/examples/LogisticToLinearNFT.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "1f9f6b913966dc11689f35c90cd2d14b",
+      "sourceName": "src/examples/LogisticToLinearNFT.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/tokens/ERC20.sol",
+        "lib/solmate/tokens/ERC721.sol",
+        "lib/solmate/utils/SafeTransferLib.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LogisticToLinearVRGDA.sol",
+        "src/LogisticVRGDA.sol",
+        "src/VRGDA.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LogisticToLinearNFT": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LogisticToLinearNFT.sol/LogisticToLinearNFT.json"
+        }
+      }
+    },
+    "test/LinearNFT.t.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "1e7ef9580d8bf6958c370b0340958adb",
+      "sourceName": "test/LinearNFT.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/test/utils/DSTestPlus.sol",
+        "lib/solmate/test/utils/Hevm.sol",
+        "lib/solmate/test/utils/ds-test/test.sol",
+        "lib/solmate/tokens/ERC20.sol",
+        "lib/solmate/tokens/ERC721.sol",
+        "lib/solmate/utils/SafeTransferLib.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LinearVRGDA.sol",
+        "src/VRGDA.sol",
+        "src/examples/LinearNFT.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "LinearNFTTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LinearNFT.t.sol/LinearNFTTest.json"
+        }
+      }
+    },
+    "test/LinearVRGDA.t.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "7d90f859212bc36d2df21bb86b4d9b09",
+      "sourceName": "test/LinearVRGDA.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/test/utils/DSTestPlus.sol",
+        "lib/solmate/test/utils/Hevm.sol",
+        "lib/solmate/test/utils/ds-test/test.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LinearVRGDA.sol",
+        "src/VRGDA.sol",
+        "test/mocks/MockLinearVRGDA.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "LinearVRGDATest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LinearVRGDA.t.sol/LinearVRGDATest.json"
+        }
+      }
+    },
+    "test/LogisticNFT.t.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "0df7646564e26a4f3cd5574493dd259e",
+      "sourceName": "test/LogisticNFT.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/test/utils/DSTestPlus.sol",
+        "lib/solmate/test/utils/Hevm.sol",
+        "lib/solmate/test/utils/ds-test/test.sol",
+        "lib/solmate/tokens/ERC20.sol",
+        "lib/solmate/tokens/ERC721.sol",
+        "lib/solmate/utils/SafeTransferLib.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LogisticVRGDA.sol",
+        "src/VRGDA.sol",
+        "src/examples/LogisticNFT.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "LogisticNFTTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LogisticNFT.t.sol/LogisticNFTTest.json"
+        }
+      }
+    },
+    "test/LogisticToLinearNFT.t.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "794477d77d57fa8fa643c63e5a87bfac",
+      "sourceName": "test/LogisticToLinearNFT.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/test/utils/DSTestPlus.sol",
+        "lib/solmate/test/utils/Hevm.sol",
+        "lib/solmate/test/utils/ds-test/test.sol",
+        "lib/solmate/tokens/ERC20.sol",
+        "lib/solmate/tokens/ERC721.sol",
+        "lib/solmate/utils/SafeTransferLib.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LogisticToLinearVRGDA.sol",
+        "src/LogisticVRGDA.sol",
+        "src/VRGDA.sol",
+        "src/examples/LogisticToLinearNFT.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "LogisticToLinearNFTTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LogisticToLinearNFT.t.sol/LogisticToLinearNFTTest.json"
+        }
+      }
+    },
+    "test/LogisticToLinearVRGDA.t.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "db6989806a906c5cbde17ed6b3289522",
+      "sourceName": "test/LogisticToLinearVRGDA.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/test/utils/DSTestPlus.sol",
+        "lib/solmate/test/utils/Hevm.sol",
+        "lib/solmate/test/utils/ds-test/test.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LogisticToLinearVRGDA.sol",
+        "src/LogisticVRGDA.sol",
+        "src/VRGDA.sol",
+        "test/mocks/MockLogisticToLinearVRGDA.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "LogisticToLinearVRGDATest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LogisticToLinearVRGDA.t.sol/LogisticToLinearVRGDATest.json"
+        }
+      }
+    },
+    "test/LogisticVRGDA.t.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "504d792d8b840a0b53e24b92e2e2489b",
+      "sourceName": "test/LogisticVRGDA.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/test/utils/DSTestPlus.sol",
+        "lib/solmate/test/utils/Hevm.sol",
+        "lib/solmate/test/utils/ds-test/test.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LogisticVRGDA.sol",
+        "src/VRGDA.sol",
+        "test/mocks/MockLogisticVRGDA.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "LogisticVRGDATest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LogisticVRGDA.t.sol/LogisticVRGDATest.json"
+        }
+      }
+    },
+    "test/correctness/LinearVRGDACorrectness.t.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "28d0298992c06f7ed0cc8d1673954607",
+      "sourceName": "test/correctness/LinearVRGDACorrectness.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/Vm.sol",
+        "lib/forge-std/console.sol",
+        "lib/solmate/test/utils/DSTestPlus.sol",
+        "lib/solmate/test/utils/Hevm.sol",
+        "lib/solmate/test/utils/ds-test/test.sol",
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LinearVRGDA.sol",
+        "src/VRGDA.sol",
+        "test/mocks/MockLinearVRGDA.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "LinearVRGDACorrectnessTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LinearVRGDACorrectness.t.sol/LinearVRGDACorrectnessTest.json"
+        }
+      }
+    },
+    "test/mocks/MockLinearVRGDA.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "0bc1c10c9952a1a05d2b30f91dac2924",
+      "sourceName": "test/mocks/MockLinearVRGDA.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LinearVRGDA.sol",
+        "src/VRGDA.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockLinearVRGDA": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockLinearVRGDA.sol/MockLinearVRGDA.json"
+        }
+      }
+    },
+    "test/mocks/MockLogisticToLinearVRGDA.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "67acddaadd92851965c09174eefdb113",
+      "sourceName": "test/mocks/MockLogisticToLinearVRGDA.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LogisticToLinearVRGDA.sol",
+        "src/LogisticVRGDA.sol",
+        "src/VRGDA.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockLogisticToLinearVRGDA": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockLogisticToLinearVRGDA.sol/MockLogisticToLinearVRGDA.json"
+        }
+      }
+    },
+    "test/mocks/MockLogisticVRGDA.sol": {
+      "lastModificationDate": 1667154055000,
+      "contentHash": "8a5c5c463961578a8753680a512b9aa7",
+      "sourceName": "test/mocks/MockLogisticVRGDA.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/solmate/utils/SignedWadMath.sol",
+        "src/LogisticVRGDA.sol",
+        "src/VRGDA.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockLogisticVRGDA": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockLogisticVRGDA.sol/MockLogisticVRGDA.json"
+        }
+      }
+    }
+  }
+}

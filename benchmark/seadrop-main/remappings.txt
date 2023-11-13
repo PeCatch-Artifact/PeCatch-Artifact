@@ -1,0 +1,6 @@
+openzeppelin-contracts=lib/openzeppelin-contracts/ 
+ERC721A=lib/ERC721A/ 
+solmate=lib/solmate/ 
+forge-std=lib/forge-std/ 
+murky=lib/murky/ 
+utility-contracts=lib/utility-contracts

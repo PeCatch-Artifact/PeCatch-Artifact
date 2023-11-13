@@ -1,0 +1,2518 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "build_infos": "out/build-info",
+    "sources": "src",
+    "tests": "test",
+    "scripts": "script",
+    "libraries": [
+      "lib",
+      "node_modules"
+    ]
+  },
+  "files": {
+    "src/auth/Auth.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "500d71f204d45547571f504f992e2b54",
+      "sourceName": "src/auth/Auth.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "Auth": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Auth.sol/Auth.json"
+        },
+        "Authority": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Auth.sol/Authority.json"
+        }
+      }
+    },
+    "src/auth/Owned.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "11fec455b72d2743b77d783d6017e1e9",
+      "sourceName": "src/auth/Owned.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "Owned": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Owned.sol/Owned.json"
+        }
+      }
+    },
+    "src/auth/authorities/MultiRolesAuthority.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "0ace4c025b7e9cf124f06ba7e7fc9f9d",
+      "sourceName": "src/auth/authorities/MultiRolesAuthority.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Auth.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MultiRolesAuthority": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MultiRolesAuthority.sol/MultiRolesAuthority.json"
+        }
+      }
+    },
+    "src/auth/authorities/RolesAuthority.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "f581263577686317a9618869f1a9652a",
+      "sourceName": "src/auth/authorities/RolesAuthority.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Auth.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "RolesAuthority": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "RolesAuthority.sol/RolesAuthority.json"
+        }
+      }
+    },
+    "src/mixins/ERC4626.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "b3b17f857a7cdf1ebd62b5c46e700f12",
+      "sourceName": "src/mixins/ERC4626.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/tokens/ERC20.sol",
+        "src/utils/FixedPointMathLib.sol",
+        "src/utils/SafeTransferLib.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC4626": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC4626.sol/ERC4626.json"
+        }
+      }
+    },
+    "src/test/Auth.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "6ca9cf7bac7af6e8ddedc31e562f5305",
+      "sourceName": "src/test/Auth.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Auth.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockAuthChild.sol",
+        "src/test/utils/mocks/MockAuthority.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "AuthTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Auth.t.sol/AuthTest.json"
+        },
+        "OutOfOrderAuthority": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Auth.t.sol/OutOfOrderAuthority.json"
+        }
+      }
+    },
+    "src/test/Bytes32AddressLib.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "4983f7e9d5022495ca2ec6f6c8f12cd5",
+      "sourceName": "src/test/Bytes32AddressLib.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/utils/Bytes32AddressLib.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "Bytes32AddressLibTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Bytes32AddressLib.t.sol/Bytes32AddressLibTest.json"
+        }
+      }
+    },
+    "src/test/CREATE3.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "0217cb7b017b00956dac2cf8db891dc4",
+      "sourceName": "src/test/CREATE3.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Auth.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockAuthChild.sol",
+        "src/test/utils/mocks/MockERC20.sol",
+        "src/tokens/ERC20.sol",
+        "src/tokens/WETH.sol",
+        "src/utils/Bytes32AddressLib.sol",
+        "src/utils/CREATE3.sol",
+        "src/utils/SafeTransferLib.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "CREATE3Test": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "CREATE3.t.sol/CREATE3Test.json"
+        }
+      }
+    },
+    "src/test/DSTestPlus.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "896932abf9d14bbe1bdd4b0f8b04d6a3",
+      "sourceName": "src/test/DSTestPlus.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "DSTestPlusTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "DSTestPlus.t.sol/DSTestPlusTest.json"
+        }
+      }
+    },
+    "src/test/ERC1155.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "f7a5e007cd6f549f903ac9d479e16702",
+      "sourceName": "src/test/ERC1155.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSInvariantTest.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockERC1155.sol",
+        "src/tokens/ERC1155.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "ERC1155Recipient": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC1155.t.sol/ERC1155Recipient.json"
+        },
+        "ERC1155Test": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC1155.t.sol/ERC1155Test.json"
+        },
+        "NonERC1155Recipient": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC1155.t.sol/NonERC1155Recipient.json"
+        },
+        "RevertingERC1155Recipient": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC1155.t.sol/RevertingERC1155Recipient.json"
+        },
+        "WrongReturnDataERC1155Recipient": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC1155.t.sol/WrongReturnDataERC1155Recipient.json"
+        }
+      }
+    },
+    "src/test/ERC20.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "df16d6f8c24024ad10029ddad4aabb42",
+      "sourceName": "src/test/ERC20.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSInvariantTest.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockERC20.sol",
+        "src/tokens/ERC20.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "BalanceSum": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC20.t.sol/BalanceSum.json"
+        },
+        "ERC20Invariants": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC20.t.sol/ERC20Invariants.json"
+        },
+        "ERC20Test": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC20.t.sol/ERC20Test.json"
+        }
+      }
+    },
+    "src/test/ERC4626.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "68add30ea4dbc0953ccc0c45a977dddc",
+      "sourceName": "src/test/ERC4626.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/mixins/ERC4626.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockERC20.sol",
+        "src/test/utils/mocks/MockERC4626.sol",
+        "src/tokens/ERC20.sol",
+        "src/utils/FixedPointMathLib.sol",
+        "src/utils/SafeTransferLib.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "ERC4626Test": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC4626.t.sol/ERC4626Test.json"
+        }
+      }
+    },
+    "src/test/ERC721.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "d408524a90d6580afb2cf30eb8e4418f",
+      "sourceName": "src/test/ERC721.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSInvariantTest.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockERC721.sol",
+        "src/tokens/ERC721.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "ERC721Recipient": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC721.t.sol/ERC721Recipient.json"
+        },
+        "ERC721Test": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC721.t.sol/ERC721Test.json"
+        },
+        "NonERC721Recipient": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC721.t.sol/NonERC721Recipient.json"
+        },
+        "RevertingERC721Recipient": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC721.t.sol/RevertingERC721Recipient.json"
+        },
+        "WrongReturnDataERC721Recipient": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC721.t.sol/WrongReturnDataERC721Recipient.json"
+        }
+      }
+    },
+    "src/test/FixedPointMathLib.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "fadb65190eb289318fc6a01fcaf19340",
+      "sourceName": "src/test/FixedPointMathLib.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/utils/FixedPointMathLib.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "FixedPointMathLibTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "FixedPointMathLib.t.sol/FixedPointMathLibTest.json"
+        }
+      }
+    },
+    "src/test/LibString.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "62e9383ff73885ccdf4607f9ed025471",
+      "sourceName": "src/test/LibString.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/utils/LibString.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LibStringTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LibString.t.sol/LibStringTest.json"
+        }
+      }
+    },
+    "src/test/MerkleProofLib.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "5057d6567bc63937cd920bd2f6f690d7",
+      "sourceName": "src/test/MerkleProofLib.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/utils/MerkleProofLib.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MerkleProofLibTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MerkleProofLib.t.sol/MerkleProofLibTest.json"
+        }
+      }
+    },
+    "src/test/MultiRolesAuthority.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "3ac7f3fb591de5ea534fff81b73b082e",
+      "sourceName": "src/test/MultiRolesAuthority.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Auth.sol",
+        "src/auth/authorities/MultiRolesAuthority.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockAuthority.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "MultiRolesAuthorityTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MultiRolesAuthority.t.sol/MultiRolesAuthorityTest.json"
+        }
+      }
+    },
+    "src/test/Owned.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "bd63d9c01ecbb353602ab080dd6eedff",
+      "sourceName": "src/test/Owned.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Owned.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockOwned.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "OwnedTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Owned.t.sol/OwnedTest.json"
+        }
+      }
+    },
+    "src/test/ReentrancyGuard.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "686cb0c545f5c33c41a71a825364217e",
+      "sourceName": "src/test/ReentrancyGuard.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/utils/ReentrancyGuard.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "ReentrancyGuardTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ReentrancyGuard.t.sol/ReentrancyGuardTest.json"
+        },
+        "RiskyContract": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ReentrancyGuard.t.sol/RiskyContract.json"
+        }
+      }
+    },
+    "src/test/RolesAuthority.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "fdf6ac7ed32f7a637c3601677d2f35cd",
+      "sourceName": "src/test/RolesAuthority.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Auth.sol",
+        "src/auth/authorities/RolesAuthority.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockAuthority.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "RolesAuthorityTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "RolesAuthority.t.sol/RolesAuthorityTest.json"
+        }
+      }
+    },
+    "src/test/SSTORE2.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "9dd048c742eec4728e4ab3b6f06d9add",
+      "sourceName": "src/test/SSTORE2.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/utils/SSTORE2.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "SSTORE2Test": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SSTORE2.t.sol/SSTORE2Test.json"
+        }
+      }
+    },
+    "src/test/SafeCastLib.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "de237ffdd64facc783a635eab2ba93c8",
+      "sourceName": "src/test/SafeCastLib.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/utils/SafeCastLib.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "SafeCastLibTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SafeCastLib.t.sol/SafeCastLibTest.json"
+        }
+      }
+    },
+    "src/test/SafeTransferLib.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "dcac66ab2e91725c8430297a72d126b0",
+      "sourceName": "src/test/SafeTransferLib.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/test/utils/mocks/MockERC20.sol",
+        "src/test/utils/weird-tokens/MissingReturnToken.sol",
+        "src/test/utils/weird-tokens/ReturnsFalseToken.sol",
+        "src/test/utils/weird-tokens/ReturnsGarbageToken.sol",
+        "src/test/utils/weird-tokens/ReturnsTooLittleToken.sol",
+        "src/test/utils/weird-tokens/ReturnsTooMuchToken.sol",
+        "src/test/utils/weird-tokens/ReturnsTwoToken.sol",
+        "src/test/utils/weird-tokens/RevertingToken.sol",
+        "src/tokens/ERC20.sol",
+        "src/utils/SafeTransferLib.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "SafeTransferLibTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SafeTransferLib.t.sol/SafeTransferLibTest.json"
+        }
+      }
+    },
+    "src/test/SignedWadMath.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "1b54db4f37d1631baf1031cf7e0fa6b3",
+      "sourceName": "src/test/SignedWadMath.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/utils/SignedWadMath.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "SignedWadMathTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SignedWadMath.t.sol/SignedWadMathTest.json"
+        }
+      }
+    },
+    "src/test/WETH.t.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "5e9e7a482870abb6080a6be57ee27605",
+      "sourceName": "src/test/WETH.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/DSInvariantTest.sol",
+        "src/test/utils/DSTestPlus.sol",
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol",
+        "src/tokens/ERC20.sol",
+        "src/tokens/WETH.sol",
+        "src/utils/SafeTransferLib.sol"
+      ],
+      "versionRequirement": "=0.8.15",
+      "artifacts": {
+        "WETHInvariants": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "WETH.t.sol/WETHInvariants.json"
+        },
+        "WETHTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "WETH.t.sol/WETHTest.json"
+        },
+        "WETHTester": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "WETH.t.sol/WETHTester.json"
+        }
+      }
+    },
+    "src/test/utils/DSInvariantTest.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "eef63c069b48071868fdcbd7c8402136",
+      "sourceName": "src/test/utils/DSInvariantTest.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "DSInvariantTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "DSInvariantTest.sol/DSInvariantTest.json"
+        }
+      }
+    },
+    "src/test/utils/DSTestPlus.sol": {
+      "lastModificationDate": 1667570517825,
+      "contentHash": "6a05b5f57849b5d56fd3e94d27211d53",
+      "sourceName": "src/test/utils/DSTestPlus.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/test/utils/Hevm.sol",
+        "src/test/utils/ds-test/test.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "DSTestPlus": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "DSTestPlus.sol/DSTestPlus.json"
+        }
+      }
+    },
+    "src/test/utils/Hevm.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "60742aa83f930a4226fbe7676f06b607",
+      "sourceName": "src/test/utils/Hevm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "Hevm": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Hevm.sol/Hevm.json"
+        }
+      }
+    },
+    "src/test/utils/ds-test/test.sol": {
+      "lastModificationDate": 1652997641000,
+      "contentHash": "962996f0e05d5218857a538a62d7c47e",
+      "sourceName": "src/test/utils/ds-test/test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "DSTest": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "test.sol/DSTest.json"
+        }
+      }
+    },
+    "src/test/utils/mocks/MockAuthChild.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "5e8712a25c5ee4c824b29f5f27f4c529",
+      "sourceName": "src/test/utils/mocks/MockAuthChild.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Auth.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockAuthChild": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockAuthChild.sol/MockAuthChild.json"
+        }
+      }
+    },
+    "src/test/utils/mocks/MockAuthority.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "68019347f0b6ff9b370a6518d954f84a",
+      "sourceName": "src/test/utils/mocks/MockAuthority.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Auth.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockAuthority": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockAuthority.sol/MockAuthority.json"
+        }
+      }
+    },
+    "src/test/utils/mocks/MockERC1155.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "27fbb8a9833bf2f80f08f2ad4ba2b378",
+      "sourceName": "src/test/utils/mocks/MockERC1155.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/tokens/ERC1155.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockERC1155": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockERC1155.sol/MockERC1155.json"
+        }
+      }
+    },
+    "src/test/utils/mocks/MockERC20.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "8cec77cb7dcd2d03e318bc0916a925f3",
+      "sourceName": "src/test/utils/mocks/MockERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/tokens/ERC20.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockERC20": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockERC20.sol/MockERC20.json"
+        }
+      }
+    },
+    "src/test/utils/mocks/MockERC4626.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "5870add93c73ebe365c028c1fbd42eb0",
+      "sourceName": "src/test/utils/mocks/MockERC4626.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/mixins/ERC4626.sol",
+        "src/tokens/ERC20.sol",
+        "src/utils/FixedPointMathLib.sol",
+        "src/utils/SafeTransferLib.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockERC4626": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockERC4626.sol/MockERC4626.json"
+        }
+      }
+    },
+    "src/test/utils/mocks/MockERC721.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "f8515741f4deb2aca669adad254532f3",
+      "sourceName": "src/test/utils/mocks/MockERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/tokens/ERC721.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockERC721": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockERC721.sol/MockERC721.json"
+        }
+      }
+    },
+    "src/test/utils/mocks/MockOwned.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "80f93ad8212ebb9aa1615f83e31c8ed7",
+      "sourceName": "src/test/utils/mocks/MockOwned.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/auth/Owned.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MockOwned": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MockOwned.sol/MockOwned.json"
+        }
+      }
+    },
+    "src/test/utils/weird-tokens/MissingReturnToken.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "50a051edf0514e8a5e9a9e78739d0918",
+      "sourceName": "src/test/utils/weird-tokens/MissingReturnToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MissingReturnToken": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MissingReturnToken.sol/MissingReturnToken.json"
+        }
+      }
+    },
+    "src/test/utils/weird-tokens/ReturnsFalseToken.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "944735fc60ebedc77e48ad844fe45f6e",
+      "sourceName": "src/test/utils/weird-tokens/ReturnsFalseToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ReturnsFalseToken": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ReturnsFalseToken.sol/ReturnsFalseToken.json"
+        }
+      }
+    },
+    "src/test/utils/weird-tokens/ReturnsGarbageToken.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "aa847d1910d090e3f8f55498ef20d4ff",
+      "sourceName": "src/test/utils/weird-tokens/ReturnsGarbageToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ReturnsGarbageToken": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ReturnsGarbageToken.sol/ReturnsGarbageToken.json"
+        }
+      }
+    },
+    "src/test/utils/weird-tokens/ReturnsTooLittleToken.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "509dbd437041bed386031be39eaa7ff9",
+      "sourceName": "src/test/utils/weird-tokens/ReturnsTooLittleToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ReturnsTooLittleToken": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ReturnsTooLittleToken.sol/ReturnsTooLittleToken.json"
+        }
+      }
+    },
+    "src/test/utils/weird-tokens/ReturnsTooMuchToken.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "f15e97b16f439f9bc58ea9a235a60071",
+      "sourceName": "src/test/utils/weird-tokens/ReturnsTooMuchToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ReturnsTooMuchToken": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ReturnsTooMuchToken.sol/ReturnsTooMuchToken.json"
+        }
+      }
+    },
+    "src/test/utils/weird-tokens/ReturnsTwoToken.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "43037f1a603a621915bd82997266b945",
+      "sourceName": "src/test/utils/weird-tokens/ReturnsTwoToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ReturnsTwoToken": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ReturnsTwoToken.sol/ReturnsTwoToken.json"
+        }
+      }
+    },
+    "src/test/utils/weird-tokens/RevertingToken.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "a4ab5c69ff50a6b8610b65f261fda4a9",
+      "sourceName": "src/test/utils/weird-tokens/RevertingToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "RevertingToken": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "RevertingToken.sol/RevertingToken.json"
+        }
+      }
+    },
+    "src/tokens/ERC1155.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "558676409e429f6c4f2deef39106e3c0",
+      "sourceName": "src/tokens/ERC1155.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC1155": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC1155.sol/ERC1155.json"
+        },
+        "ERC1155TokenReceiver": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC1155.sol/ERC1155TokenReceiver.json"
+        }
+      }
+    },
+    "src/tokens/ERC20.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "0c7c7ada139062536af09d69d96d395c",
+      "sourceName": "src/tokens/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC20": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC20.sol/ERC20.json"
+        }
+      }
+    },
+    "src/tokens/ERC721.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "ecc06cefc5404b9e1adbc2e459d5757e",
+      "sourceName": "src/tokens/ERC721.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC721": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC721.sol/ERC721.json"
+        },
+        "ERC721TokenReceiver": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ERC721.sol/ERC721TokenReceiver.json"
+        }
+      }
+    },
+    "src/tokens/WETH.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "69e323c35e4dc91027eab887117aa765",
+      "sourceName": "src/tokens/WETH.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/tokens/ERC20.sol",
+        "src/utils/SafeTransferLib.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "WETH": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "WETH.sol/WETH.json"
+        }
+      }
+    },
+    "src/utils/Bytes32AddressLib.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "8a05c8576a41e44d3e96a6e169162327",
+      "sourceName": "src/utils/Bytes32AddressLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "Bytes32AddressLib": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Bytes32AddressLib.sol/Bytes32AddressLib.json"
+        }
+      }
+    },
+    "src/utils/CREATE3.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "cb740b456e2814e69904f7b22b835435",
+      "sourceName": "src/utils/CREATE3.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/utils/Bytes32AddressLib.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "CREATE3": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "CREATE3.sol/CREATE3.json"
+        }
+      }
+    },
+    "src/utils/FixedPointMathLib.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "3945241174f1c8fdcd51c2571f8ec92e",
+      "sourceName": "src/utils/FixedPointMathLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "FixedPointMathLib": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "FixedPointMathLib.sol/FixedPointMathLib.json"
+        }
+      }
+    },
+    "src/utils/LibString.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "a6389de7be2f21dff5bf9d3f958291b3",
+      "sourceName": "src/utils/LibString.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "LibString": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "LibString.sol/LibString.json"
+        }
+      }
+    },
+    "src/utils/MerkleProofLib.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "458ca349540577f812aa8a03540c6076",
+      "sourceName": "src/utils/MerkleProofLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "MerkleProofLib": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "MerkleProofLib.sol/MerkleProofLib.json"
+        }
+      }
+    },
+    "src/utils/ReentrancyGuard.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "cf9480663950b4091d14b174c3ec0414",
+      "sourceName": "src/utils/ReentrancyGuard.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ReentrancyGuard": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ReentrancyGuard.sol/ReentrancyGuard.json"
+        }
+      }
+    },
+    "src/utils/SSTORE2.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "8c39a32d85cfad44e775d7a3f0e428cb",
+      "sourceName": "src/utils/SSTORE2.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "SSTORE2": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SSTORE2.sol/SSTORE2.json"
+        }
+      }
+    },
+    "src/utils/SafeCastLib.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "99fd762f92be95d730a50cf30215d3a9",
+      "sourceName": "src/utils/SafeCastLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "SafeCastLib": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SafeCastLib.sol/SafeCastLib.json"
+        }
+      }
+    },
+    "src/utils/SafeTransferLib.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "668dd0a8a175344c51036ae7fcb01d36",
+      "sourceName": "src/utils/SafeTransferLib.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/tokens/ERC20.sol"
+      ],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "SafeTransferLib": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SafeTransferLib.sol/SafeTransferLib.json"
+        }
+      }
+    },
+    "src/utils/SignedWadMath.sol": {
+      "lastModificationDate": 1666901592000,
+      "contentHash": "408f576e359546d0f606fcea78076d34",
+      "sourceName": "src/utils/SignedWadMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "SignedWadMath": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "SignedWadMath.sol/SignedWadMath.json"
+        }
+      }
+    }
+  }
+}
