@@ -5,6 +5,17 @@ Paper: How to Save My Gas Fees: Understanding and Detecting Real-world Gas Issue
 This document is to help users reproduce the results we reported in our submission. 
 It contains the following descriptions:
 
+## Artifact Overview
+- ```benchmark``` folder:
+    the 10 repostories of the specific version on which we conduct our experiments
+- ```code``` folder:
+    source code of PeCatch
+- ```results``` folder:
+    - ```result.xlsx```:
+        the results of PeCatch, Slither, GasSaver and python-solidity-optimizer
+    - ```gas impact-bugs``` folder:
+        patches of the 8 bugs our tool found for each pattern.
+
 ## Getting Started
 
 ### Install PeCatch
@@ -31,14 +42,7 @@ example of run multiple checkers:
 slither --detect and-in-if,bool,unchecked tests/test_chr1/test.sol
 ```
 
-### Artifact Overview
-- ```benchmark``` folder:
-    the 10 repostories of the specific version on which we conduct our experiments
-- ```code``` folder:
-    source code of PeCatch
-- ```results``` folder:
-    - ```result.xlsx```:
-        the results of PeCatch, Slither, GasSaver and python-solidity-optimizer
-    - ```gas impact-bugs``` folder:
-        patches of the 8 bugs our tool found for each pattern.
+
+
+
 
