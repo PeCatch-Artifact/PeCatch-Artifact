@@ -35,11 +35,13 @@ from slither.core.solidity_types.user_defined_type import UserDefinedType
 from slither.core.declarations.contract import Contract
 from slither.core.declarations.structure import Structure
 from slither.core.solidity_types.elementary_type import ElementaryType
+from slither.core.solidity_types.array_type import ArrayType
+from slither.core.solidity_types.mapping_type import MappingType
 
 
 from .cfg import *
 from .loop import *
-from .allocinloop import *
+from .allocinloop import getAllBlocks,changeStack
 
 def getGenSet(ir, defDict):
     setGen = set()
@@ -66,9 +68,11 @@ def getGenSet(ir, defDict):
             # print(ir.node, ir, type(ir), args[0], args[0].type, type(args[0].type))
         for arg in args:  
             if storageAndNotConstant(arg):
-                setGen.add(arg.non_ssa_version)
+                if not isinstance(arg.type, ArrayType) and not isinstance(arg.type, MappingType):
+                    setGen.add(arg.non_ssa_version)
             elif isinstance(arg, Identifier) and storageAndNotConstant_call(arg):
-                setGen.add(arg.value)
+                if not isinstance(arg.type, ArrayType) and not isinstance(arg.type, MappingType):
+                    setGen.add(arg.value)
             elif isinstance(arg, ReferenceVariable):
                 tmpSet = getAllStateTuple(arg, defDict)
                 if tmpSet:
@@ -154,6 +158,8 @@ def getAllCallRead(arg, targetSet):
             subSet += (t,)
 
 def getAllStateTuple(v, defDict):
+    if isinstance(v.type, ArrayType) or isinstance(v.type, MappingType):
+        return None
     tmpIr = defDict[v][0]
     tmpSet = ()
     isSateVar = False
