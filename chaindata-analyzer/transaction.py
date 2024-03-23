@@ -42,7 +42,7 @@ def handleTransaction(blockNum):
                 continue
 
             logs = tx_traces["result"]["structLogs"]
-            storage_gas_tmp,memory_gas_tmp,calldata_gas_tmp,stack_gas_tmp,total_gas_tmp,opcode_num_tmp = analyze.analyzeDistribution(logs, opcode_map, constackop_map)
+            storage_gas_tmp,memory_gas_tmp,calldata_gas_tmp,stack_gas_tmp,total_gas_tmp,opcode_num_tmp,gas_map = analyze.analyzeDistribution(logs, opcode_map, constackop_map)
             storage_gas+=storage_gas_tmp
             memory_gas+=memory_gas_tmp
             calldata_gas+=calldata_gas_tmp
