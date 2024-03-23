@@ -99,5 +99,3 @@ input/contracts/lens/TickLens.sol
 ######### number of instances         procedure rule 1: 0
 ########################################################################
 
-VRGDA:
-None

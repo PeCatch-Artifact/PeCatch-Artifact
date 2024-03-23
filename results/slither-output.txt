@@ -80,6 +80,4 @@ UniswapInterfaceMulticall.multicall(UniswapInterfaceMulticall.Call[]) (contracts
 Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#return-bomb
 INFO:Slither:./contracts/lens analyzed (49 contracts with 6 detectors), 5 result(s) found
 
-VRGDA:
-None
 
