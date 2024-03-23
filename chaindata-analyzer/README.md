@@ -1,8 +1,8 @@
-## EMPIRICAL STUDY ON ON-CHAIN GAS DATA
+## Runtime Gas Issues and Their Impacts
 
 - transaction.py –– save gas data for each block
 
-- analyze.py –– compute gas consumption on data store areas
+- analyze.py –– compute gas consumption on data store areas and opcodes
 
 - pattern.py –– compute gas impacts of patterns
 

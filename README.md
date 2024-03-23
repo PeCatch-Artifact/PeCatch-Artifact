@@ -1,7 +1,6 @@
-# The code and results for ICSE 2025 Artifact Evaluation
+# The Code and Results for ICSE 2025 Artifact Evaluation
 
-Paper: How My Gas Fees Are Wasted: Understanding
-Real-world Gas Issues in Solidity Programs
+Paper: How My Gas Fees Are Wasted: Understanding Real-world Gas Issues in Solidity Programs
 
 This document is to help users reproduce the results we reported in our submission. 
 It contains the following descriptions:
@@ -33,7 +32,7 @@ $ pip install -r requirements.txt
 $ python setup.py develop
 ```
 
-### Run checkers
+### Run Checkers
 ```
 slither --detect <checker name> <directory path>/<contract path>
 ```

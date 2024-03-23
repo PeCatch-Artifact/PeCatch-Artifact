@@ -6,7 +6,7 @@ Proceedings of the ACM in Programming Languages (OOPSLA) 2018
 ## Getting Started
 Re-implemented with Slither
 
-### Run checkers
+### Run Checkers
 ```
 slither --detect unbounded,wallet-grief,loop-overflow <directory path>/<contract path>
 ```
