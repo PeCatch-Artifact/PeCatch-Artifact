@@ -215,20 +215,15 @@ def mergeAll():
     stackop_f = open("./result/total_stackop.json", "w")
     json.dump(dict(sorted(constackop_map.items(), key=lambda item: int(item[0]), reverse=True)), stackop_f)
     stackop_f.close()
-
-    times_sum, gas_sum = 0,0
-    for op in opcode_map:
-        times_sum+=opcode_map[op][0]
-        gas_sum+=opcode_map[op][1]
     
     sorted_opcode = dict(sorted(opcode_map.items(), key=lambda item: item[1][0], reverse=True)[:10])
     print("\ntop 10 opcode (sort by times):")
     for op in sorted_opcode:
-        print(op, '{:.2%}'.format(sorted_opcode[op][0]/times_sum), "times:", sorted_opcode[op][0], "gas:", sorted_opcode[op][1])
+        print(op, '{:.2%}'.format(sorted_opcode[op][0]/opcode_num), "times:", sorted_opcode[op][0], "gas:", sorted_opcode[op][1])
     sorted_opcode = dict(sorted(opcode_map.items(), key=lambda item: item[1][1], reverse=True)[:10])
     print("\ntop 10 opcode (sort by gas):")
     for op in sorted_opcode:
-        print(op, '{:.2%}'.format(sorted_opcode[op][1]/gas_sum), "gas:", sorted_opcode[op][1], "times:", sorted_opcode[op][0])
+        print(op, '{:.2%}'.format(sorted_opcode[op][1]/total_gas), "gas:", sorted_opcode[op][1], "times:", sorted_opcode[op][0])
 
     nse_f = open("./result/total_nosideeffect.txt", "w")
     nse_f.write(str(nse_map))
@@ -239,7 +234,7 @@ def mergeAll():
     for seq in sorted_nse:
         print(seq, sorted_nse[seq][0], sorted_nse[seq][1], sorted_nse[seq][1]*gasPrice)
 
-def getConStackop():
+def getConStackop(total_gas, opcode_num):
     constackop_map = {}
 
     for i in range(19129889, 19201122):
@@ -264,13 +259,9 @@ def getConStackop():
     num_50_100,gas_50_100 = 0,0
     num_100_1000,gas_100_1000 = 0,0
     num_1000,gas_1000 = 0,0
-    total_gas, opcode_num = 0,0
     gasPrice = 3659.74*56.89*pow(10,-9)
 
     for key in constackop_map:
-        opcode_num+=constackop_map[key][0]*int(key)
-        total_gas+=constackop_map[key][1]
-
         if int(key) < 10:
             num_10+=constackop_map[key][0]*int(key)
             gas_10+=constackop_map[key][1]

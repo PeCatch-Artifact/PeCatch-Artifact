@@ -17,7 +17,7 @@ It contains the following descriptions:
     - ```gas impact-bugs``` folder:
         patches of the 8 bugs used to calculate gas impact.
 - ```chaindata-analyzer```:
-    source code of empirical study on on-chain gas data
+    source code of analyzing EVM transaction traces
 - ```MadMax```:
     source code of re-implementing MadMax with Slither
 - ```scripts```:
