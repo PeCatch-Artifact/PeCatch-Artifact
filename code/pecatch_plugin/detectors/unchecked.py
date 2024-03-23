@@ -201,13 +201,11 @@ def detectUnchecked(c):
                             if left not in var_add:
                                 var_add[left] = (right,ir)
                             else:
-                                # print(right, ir, "add_left")
                                 removeVars.append(left)
                         if isinstance(right, StateVariable):
                             if right not in var_add:
                                 var_add[right] = (left,ir)
                             else:
-                                # print(right, ir, "add_right")
                                 removeVars.append(right)
                     elif ir.type == BinaryType.SUBTRACTION:
                         left = getRefVar(ir.variable_left, refDict)
@@ -220,13 +218,11 @@ def detectUnchecked(c):
                             if left not in var_sub:
                                 var_sub[left] = (right,ir)
                             else:
-                                # print(right, ir, "sub_left")
                                 removeVars.append(left)
                         if isinstance(right, StateVariable):
                             if right not in var_sub:
                                 var_sub[right] = (left,ir)
                             else:
-                                # print(right, ir, "sub_right")
                                 removeVars.append(right)
         for key in var_add:
             if key in var_sub:
@@ -234,11 +230,8 @@ def detectUnchecked(c):
                     candidates[f].append((key, var_add[key][1], key, var_sub[key][1]))
                     continue
                 else:
-                    # print(key, var_add[key][0], var_sub[key][0])
                     removeVars.append(key) 
-    
-    # for r in removeVars:
-    #     print(r, "&&&&&")
+
     for item in removeVars:
         if item in largeVars:
             del largeVars[item]
@@ -342,11 +335,9 @@ def checkStateVarInFunc(f, smallVars, largeVars, dominators, refDict):
     replace_dict_add = {}
     for i in range(len(additions)-1):
         ira = additions[i]
-        # hasPair = False
         for j in range(i+1,len(additions)):
             irb = additions[j]
             is_can = isCandidate(ira, irb, largeVars, dominators, refDict, alias)
-            # print(ira, irb, is_can)
             if isinstance(is_can, tuple):
                 (ira,irb,a,b) = is_can
                 if isinstance(a, tuple):
@@ -389,7 +380,6 @@ def checkStateVarInFunc(f, smallVars, largeVars, dominators, refDict):
     return candidates   
 
 def checkLocalVar(f, dominators, refDict):
-    # print(f, "***********************")
     additions = []
     substractions = []
     vals = {}
@@ -399,7 +389,6 @@ def checkLocalVar(f, dominators, refDict):
             if "int" in str(var.type):
                 vals[var] = 0
         for ir in node.irs_ssa:
-            # print(node, ir, type(ir))
             if isinstance(ir, Unpack):
                 lvalue = getRefVar(ir.lvalue, refDict)
                 if isinstance(lvalue, tuple):
@@ -409,8 +398,6 @@ def checkLocalVar(f, dominators, refDict):
             elif isinstance(ir, Assignment):
                 lvar = getRefVar(ir.lvalue, refDict)
                 vals[lvar] = ir.rvalue
-                # if isinstance(ir.rvalue, Constant) or isinstance(ir.rvalue, LocalVariable) or isinstance(ir.rvalue, StateVariable):
-                #     vals[lvar] = ir.rvalue
             elif isinstance(ir, Binary):
                 if ir.type == BinaryType.ADDITION:
                     left = getRefVar(ir.variable_left, refDict)
@@ -446,9 +433,6 @@ def checkLocalVar(f, dominators, refDict):
             (ir2,left2,left2_val,right2) = additions[j]
             if left1 == left2:
                 continue
-            # print("***************")
-            # print(ir1,left1,left1_val,right1)
-            # print(ir2,left2,left2_val,right2)
             if ir2 in dominators[ir1]:
                 (ir1,left1,left1_val,right1) = additions[j]
                 (ir2,left2,left2_val,right2) = additions[i]
@@ -527,7 +511,6 @@ def isCandidate(ira, irb, largeVars, dominators, refDict, alias):
             b_first = b[0]
         if isinstance(b_added, tuple):
             b_added_first = b_added[0]
-        # print(b, b_added, b_first, b_added_first)
         if b_first not in largeVars:
             if b_added_first not in largeVars:
                 return False
@@ -548,7 +531,6 @@ def isCandidate(ira, irb, largeVars, dominators, refDict, alias):
             a_first = a[0]
         if isinstance(a_added, tuple):
             a_added_first = a_added[0]
-        # print(a, a_added, a_first, a_added_first)
         if a_first not in largeVars[b_first]:
             if a_added_first not in largeVars[b_first]:
                 return False
@@ -678,7 +660,7 @@ class Unchecked(AbstractDetector):  # pylint: disable=too-few-public-methods
                 continue
             if c.is_interface:
                 continue
-            # print(c)
+            
             bugs = detectUnchecked(c)
             for f in bugs:
                 if len(bugs[f]) > 0:
@@ -706,10 +688,6 @@ class Unchecked(AbstractDetector):  # pylint: disable=too-few-public-methods
                         else:
                             if isinstance(bugs[f][i][0], tuple):
                                 info.append(bugs[f][i][0][0].name)
-                                # if bugs[i][0][-1] == Member:
-                                #     info.append(bugs[f][i][0][0].name + "." + bugs[f][i][0][1].name)
-                                # else:
-                                #     info.append(bugs[f][i][0][0].name + "[" + bugs[f][i][0][1].name + "]")
                             else:
                                 info.append(bugs[f][i][0].name)
                             info.append("\t")

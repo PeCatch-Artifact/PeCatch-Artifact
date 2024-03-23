@@ -1,5 +1,4 @@
 from slither.detectors.abstract_detector import AbstractDetector, DetectorClassification
-from slither.slithir.variables.state_variable import StateIRVariable
 from slither.core.solidity_types.elementary_type import ElementaryType
 
 from . cfg import *

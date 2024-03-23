@@ -20,7 +20,6 @@ def printExpression(e):
     for f in dir(e):
         print(f)
 
-
     print("Context:", e.context)
     print("expression_left:", e.expression_left)
     print("expression_right:", e.expression_right)
@@ -34,7 +33,6 @@ def printExpression(e):
 def containAddOps(v):
     worklist = [v]
     added = [v]
-
 
     while len(worklist) > 0:
         e = worklist.pop(0)

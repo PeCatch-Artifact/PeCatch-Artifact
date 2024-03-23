@@ -23,8 +23,6 @@ def getRefDict(f):
                 refDict[ir.lvalue] = (ir.variable_left, ir.variable_right)
             elif isinstance(ir, Length):
                 refDict[ir.lvalue] = (ir.value, "length")
-            # elif isinstance(ir, Assignment) and not isinstance(ir.lvalue, Constant):
-            #     refDict[ir.lvalue] = ir.rvalue
     return refDict
 
 def assignValue(ir):

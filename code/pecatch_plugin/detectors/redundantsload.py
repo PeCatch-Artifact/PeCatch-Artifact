@@ -49,7 +49,6 @@ def getGenSet(ir, defDict):
     if ".pop(" in str(ir.node.expression) or ".push(" in str(ir.node.expression):
         return setGen
 
-    # print(ir.node, ir, type(ir))
     if isinstance(ir, Phi):
         pass
     elif isinstance(ir, ReferenceVariableSSA):
@@ -65,7 +64,6 @@ def getGenSet(ir, defDict):
         if isinstance(ir, LibraryCall):
             if args and not isinstance(args[0].type, ElementaryType):
                 args = args[1:]
-            # print(ir.node, ir, type(ir), args[0], args[0].type, type(args[0].type))
         for arg in args:  
             if storageAndNotConstant(arg):
                 if not isinstance(arg.type, ArrayType) and not isinstance(arg.type, MappingType):
@@ -521,7 +519,6 @@ def filterStackTooDeep(f, bugs):
             new_vars[t[0]] = [t[1].node, t[2].node]
     can_var = []
     checkPath(f.entry_point, {}, stack, blocks, block_var_decl, new_vars, can_var)
-    # print(can_var)
     new_bugs = []
     for t in bugs:
         if t[0] in can_var:

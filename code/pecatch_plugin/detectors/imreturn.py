@@ -6,7 +6,6 @@ from slither.core.cfg.node import NodeType
 from slither.core.solidity_types.user_defined_type import UserDefinedType
 from slither.core.declarations.structure import Structure
 from slither.core.solidity_types.elementary_type import ElementaryType
-from slither.core.expressions.tuple_expression import TupleExpression
 
 
 def computeDef(f: "Function"):

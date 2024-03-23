@@ -66,13 +66,13 @@ def checkInvariant(loop):
                         v_non_ssa = v.non_ssa_version
                     if isStackType(v_non_ssa):
                         if v not in refDict and isinstance(v, StateIRVariable):
-                            # print(v, v.type, type(v), v.is_immutable, v.non_ssa_version.is_immutable)
+                            
                             if v.non_ssa_version not in can_var:
                                 can_var[v.non_ssa_version] = []
                             can_var[v.non_ssa_version].append(ir)
                         elif v in refDict:
                             ref_var = getRefVar(v, refDict)
-                            # print(node, ir, v, v.type, v.type.is_dynamic)
+                            
                             is_can = True
                             if isinstance(ref_var, tuple):
                                 if isinstance(ref_var[0], Contract) and (isinstance(ref_var[1], Constant) or ref_var[1].is_constant or ref_var[1].is_immutable):

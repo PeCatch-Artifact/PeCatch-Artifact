@@ -25,13 +25,6 @@ def printCFG(f: "Function", mapBBIDs):
         print()
         for ir in node.irs_ssa:
             print(ir)
-            #if not isinstance(ir, Phi):
-            #    if isinstance(ir, Assignment):
-            #        print(type(ir.lvalue), ir.lvalue)
-                
-                #for v in ir.read:
-                #    if isinstance(v, StateIRVariable):
-                #        print("read state")
 
         print('\t succ:', end = ' ')
         for son in node.sons:

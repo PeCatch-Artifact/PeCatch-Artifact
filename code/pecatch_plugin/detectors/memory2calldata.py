@@ -1,14 +1,6 @@
 from slither.detectors.abstract_detector import AbstractDetector, DetectorClassification
 from slither.slithir.operations.phi import Phi
-# from slither.slithir.operations.lvalue import OperationWithLValue
-# from slither.slithir.operations.solidity_call import SolidityCall
 from slither.slithir.operations.internal_call import InternalCall
-# from slither.slithir.operations.binary import Binary
-# from slither.slithir.operations.unary import Unary
-# from slither.slithir.operations.call import Call
-# from slither.slithir.operations.index import Index
-# from slither.slithir.operations.member import Member
-# from slither.slithir.operations.length import Length
 from slither.core.solidity_types.mapping_type import MappingType
 from slither.core.solidity_types.array_type import ArrayType
 from slither.core.solidity_types.elementary_type import ElementaryType
@@ -26,17 +18,14 @@ from.utils import *
 def detect(f: "Function"):
     bugs = {}
     mpars = {}
-    # refv = {}
     for i in range(len(f.parameters)):
         p = f.parameters[i]
         if p.location == "memory":
             if isinstance(p.type, UserDefinedType) and isinstance(p.type.type, Structure):
                 mpars[p] = i
-                # mpars[p] = (p, i)
             elif isinstance(p.type, MappingType) or isinstance(p.type, ArrayType) \
                 or (isinstance(p.type, ElementaryType) and p.type.is_dynamic):
                 mpars[p] = i
-                # mpars[p] = (p, i)
 
     removeIndex = getChanged(f, mpars)
 
@@ -53,10 +42,6 @@ def getChanged(f, mpars):
         for ir in node.irs_ssa:
             if isinstance(ir, Phi):
                 continue
-            # if isinstance(ir, Index) or isinstance(ir, Member):
-            #     refv[ir.lvalue] = (ir.variable_left, ir.variable_right)
-            # elif isinstance(ir, Length):
-            #     refv[ir.lvalue] = (ir.value, "length")
             leftval = None
             if isinstance(ir, Unpack):
                 if ir.lvalue in tuple_var:
@@ -67,13 +52,9 @@ def getChanged(f, mpars):
                 else:
                     leftval = ir.lvalue
             if leftval and not isinstance(leftval, TemporaryVariable):
-                # while leftval in refv:
-                #     leftval = refv[leftval]
-                # leftval = leftval.non_ssa_version
                 leftval = getRefVar(leftval, refv)
                 if isinstance(leftval, tuple):
                     if leftval[0] in mpars:
-                        # print(f, node, ir, leftval)
                         index = mpars[leftval[0]]
                         if index in mpars:
                             if belongto(mpars[index], leftval):
@@ -89,10 +70,6 @@ def filter(functions, candidates):
         refv = getRefDict(f)
         for node in f.nodes:
             for ir in node.irs_ssa:
-                # if isinstance(ir, Index) or isinstance(ir, Member):
-                #     refv[ir.lvalue] = (ir.variable_left, ir.variable_right)
-                # elif isinstance(ir, Length):
-                #     refv[ir.lvalue] = (ir.value, "length")
                 if isinstance(ir, InternalCall) and ir.function in candidates:
                     mpars = {}
                     removeIndex = []
@@ -144,8 +121,6 @@ class Memory2Calldata(AbstractDetector):
                 for f in c.functions_declared:
                     if f.is_constructor or not f.is_implemented:
                         continue
-                    # if f.visibility == "internal" or f.visibility == "private":
-                    #     continue
                     if f.visibility == "external":
                         bugs[f] = detect(f)
                     elif f.visibility == "public":
