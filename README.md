@@ -1,6 +1,6 @@
-# The Code and Results for ICSE 2025 Artifact Evaluation
+# The Code and Results for ASPLOS 2025 Artifact Evaluation
 
-Paper: How My Gas Fees Are Wasted: Understanding Real-world Gas Issues in Solidity Programs
+Paper: How to Save My Gas Fees: Understanding and Detecting Real-World Gas Issues in Solidity Programs
 
 This document is to help users reproduce the results we reported in our submission. 
 It contains the following descriptions:
@@ -12,9 +12,7 @@ It contains the following descriptions:
     source code of PeCatch
 - ```results``` folder:
     - ```result.xlsx```:
-        the results of PeCatch, Slither, GasSaver and python-solidity-optimizer
-    - ```gas impact-bugs``` folder:
-        patches of the 8 bugs used to calculate gas impact.
+        the results of PeCatch, Slither, GasSaver and python-solidity-optimizer and 14 opcode sequences of compiler issues
 - ```chaindata-analyzer```:
     source code of analyzing EVM transaction traces
 - ```MadMax```:
