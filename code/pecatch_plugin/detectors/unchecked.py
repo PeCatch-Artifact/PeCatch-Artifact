@@ -17,6 +17,7 @@ from slither.slithir.variables.reference_ssa import ReferenceVariableSSA
 from slither.slithir.variables.temporary import TemporaryVariable
 from slither.slithir.variables.reference import ReferenceVariable
 from typing import List, Optional
+from .sameasif import detectSameAsIf
 
 from .cfg import *
 from .loop import *
@@ -698,7 +699,25 @@ class Unchecked(AbstractDetector):  # pylint: disable=too-few-public-methods
                     
                     res = self.generate_result(info)
                     results.append(res)
+                
+        for c in self.compilation_unit.contracts_derived:
+            for f in c.functions:
+                bugs = detectSameAsIf(f)
+                if len(bugs) > 0:
+                    info = [ str(f.name) + '() @ ' + str(f.source_mapping) + '\n' ]
 
-
+                    i = 0
+                    while i < len(bugs):
+                        info.append("[BUG:] ")
+                        info.append(str(i))
+                        info.append(": ") 
+                        info.append(str(bugs[i].node.source_mapping))
+                        info.append("\n")
+                        i += 1
+                    info.append("\n")
+                    
+                    res = self.generate_result(info)
+                    results.append(res)
+                    
         return results
 
