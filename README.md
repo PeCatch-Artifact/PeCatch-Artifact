@@ -1,4 +1,4 @@
-# The Code and Results for ASPLOS 2025 Artifact Evaluation
+# The Code and Results for PeCatch
 
 Paper: How to Save My Gas Fees: Understanding and Detecting Real-World Gas Issues in Solidity Programs
 
